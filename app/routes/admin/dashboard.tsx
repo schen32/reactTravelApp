@@ -43,7 +43,7 @@ const dashboard = () => {
                 key={id}
                 id={id.toString()}
                 name={name}
-                imageUrls={imageUrls[0]}
+                imageUrl={imageUrls[0]}
                 location={itinerary[0]?.location ?? ""}
                 tags={tags}
                 price={estimatedPrice}

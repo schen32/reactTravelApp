@@ -11,7 +11,7 @@ const TripCard = ({
   id,
   name,
   location,
-  imageUrls,
+  imageUrl,
   tags,
   price,
 }: TripCardProps) => {
@@ -26,7 +26,7 @@ const TripCard = ({
       }
       className="trip-card"
     >
-      <img src={imageUrls} alt={name}></img>
+      <img src={imageUrl} alt={name}></img>
 
       <article>
         <h2>{name}</h2>
