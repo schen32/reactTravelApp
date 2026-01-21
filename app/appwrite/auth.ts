@@ -119,5 +119,6 @@ export const storeUserData = async () => {
       return { users: rows, total };
     } catch (e) {
       console.log("Error fetching users")
+      return { users: [], total: 0 };
     }
   }

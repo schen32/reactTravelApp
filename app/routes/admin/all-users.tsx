@@ -2,9 +2,18 @@ import { Header } from "components";
 import { ColumnDirective, GridComponent } from "@syncfusion/ej2-react-grids";
 import { users } from "~/constants";
 import { ColumnsDirective } from "@syncfusion/ej2-react-charts";
-import { cn } from "lib/utils";
+import { cn, formatDate } from "lib/utils";
+import { getAllUsers } from "~/appwrite/auth";
+import type { Route } from "./+types/all-users";
 
-const allUsers = () => {
+export const loader = async () => {
+  const { users, total } = await getAllUsers(10, 0);
+  return { users, total };
+};
+
+const allUsers = ({ loaderData }: Route.ComponentProps) => {
+  // const { users } = loaderData;
+
   return (
     <main className="all-users wrapper">
       <Header
@@ -41,6 +50,9 @@ const allUsers = () => {
             headerText="Date Joined"
             width="120"
             textAlign="Left"
+            template={({ dateJoined }: { dateJoined: string }) =>
+              formatDate(dateJoined)
+            }
           ></ColumnDirective>
           <ColumnDirective
             field="itineraryCreated"
