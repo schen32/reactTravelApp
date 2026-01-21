@@ -6,24 +6,24 @@ import MobileSidebar from "components/MobileSidebar";
 import { account } from "~/appwrite/client";
 import { getExistingUser, storeUserData } from "~/appwrite/auth";
 
-export async function clientLoader() {
-  try {
-    const user = await account.get();
-    if (!user.$id) {
-      redirect("/sign-in");
-    }
+// export async function clientLoader() {
+//   try {
+//     const user = await account.get();
+//     if (!user.$id) {
+//       return redirect("/sign-in");
+//     }
 
-    const existingUser = await getExistingUser(user.$id);
-    if (existingUser?.status === "user") {
-      return redirect("/");
-    }
+//     const existingUser = await getExistingUser(user.$id);
+//     if (existingUser?.status === "user") {
+//       return redirect("/");
+//     }
 
-    return existingUser?.$id ? existingUser : await storeUserData();
-  } catch (e) {
-    console.error("clientLoader", e);
-    return redirect("/sign-in");
-  }
-}
+//     return existingUser?.$id ? existingUser : await storeUserData();
+//   } catch (e) {
+//     console.error("clientLoader", e);
+//     return redirect("/sign-in");
+//   }
+// }
 
 const adminLayout = () => {
   return (
