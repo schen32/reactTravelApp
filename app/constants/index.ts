@@ -141,6 +141,100 @@ export const RIGHT_CONFETTI = {
   origin: { x: 1, y: 1 },
 };
 
+export const users = [
+  {
+    "id": "usr_001",
+    "name": "Alice Thompson",
+    "email": "alice.thompson@example.com",
+    "imageUrl": "https://i.pravatar.cc/150?img=1",
+    "dateJoined": "2024-02-14T10:22:31.000Z",
+    "itineraryCreated": 3,
+    "status": "active"
+  },
+  {
+    "id": "usr_002",
+    "name": "Marcus Lee",
+    "email": "marcus.lee@example.com",
+    "imageUrl": "https://i.pravatar.cc/150?img=2",
+    "dateJoined": "2024-03-01T16:05:12.000Z",
+    "itineraryCreated": 7,
+    "status": "active"
+  },
+  {
+    "id": "usr_003",
+    "name": "Sofia Alvarez",
+    "email": "sofia.alvarez@example.com",
+    "imageUrl": "https://i.pravatar.cc/150?img=3",
+    "dateJoined": "2024-01-22T08:41:55.000Z",
+    "itineraryCreated": 1,
+    "status": "inactive"
+  },
+  {
+    "id": "usr_004",
+    "name": "Daniel Cooper",
+    "email": "daniel.cooper@example.com",
+    "imageUrl": "https://i.pravatar.cc/150?img=4",
+    "dateJoined": "2023-12-09T19:14:03.000Z",
+    "itineraryCreated": 12,
+    "status": "active"
+  },
+  {
+    "id": "usr_005",
+    "name": "Priya Patel",
+    "email": "priya.patel@example.com",
+    "imageUrl": "https://i.pravatar.cc/150?img=5",
+    "dateJoined": "2024-04-05T11:30:47.000Z",
+    "itineraryCreated": 0,
+    "status": "pending"
+  },
+  {
+    "id": "usr_006",
+    "name": "Noah Williams",
+    "email": "noah.williams@example.com",
+    "imageUrl": "https://i.pravatar.cc/150?img=6",
+    "dateJoined": "2023-11-18T14:02:20.000Z",
+    "itineraryCreated": 9,
+    "status": "active"
+  },
+  {
+    "id": "usr_007",
+    "name": "Emily Chen",
+    "email": "emily.chen@example.com",
+    "imageUrl": "https://i.pravatar.cc/150?img=7",
+    "dateJoined": "2024-02-28T09:55:10.000Z",
+    "itineraryCreated": 4,
+    "status": "active"
+  },
+  {
+    "id": "usr_008",
+    "name": "Liam O'Connor",
+    "email": "liam.oconnor@example.com",
+    "imageUrl": "https://i.pravatar.cc/150?img=8",
+    "dateJoined": "2023-10-03T17:48:36.000Z",
+    "itineraryCreated": 15,
+    "status": "suspended"
+  },
+  {
+    "id": "usr_009",
+    "name": "Hannah Müller",
+    "email": "hannah.mueller@example.com",
+    "imageUrl": "https://i.pravatar.cc/150?img=9",
+    "dateJoined": "2024-01-10T13:21:44.000Z",
+    "itineraryCreated": 2,
+    "status": "active"
+  },
+  {
+    "id": "usr_010",
+    "name": "Jordan Smith",
+    "email": "jordan.smith@example.com",
+    "imageUrl": "https://i.pravatar.cc/150?img=10",
+    "dateJoined": "2024-04-18T07:09:58.000Z",
+    "itineraryCreated": 6,
+    "status": "active"
+  }
+]
+
+
 export const user = { name: "Adrian" };
 export const dashboardStats = {
   totalUsers: 12450,
