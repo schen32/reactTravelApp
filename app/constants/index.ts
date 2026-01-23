@@ -149,7 +149,7 @@ export const users = [
     "imageUrl": "https://i.pravatar.cc/150?img=1",
     "dateJoined": "2024-02-14T10:22:31.000Z",
     "itineraryCreated": 3,
-    "status": "active"
+    "status": "admin"
   },
   {
     "id": "usr_002",
@@ -158,7 +158,7 @@ export const users = [
     "imageUrl": "https://i.pravatar.cc/150?img=2",
     "dateJoined": "2024-03-01T16:05:12.000Z",
     "itineraryCreated": 7,
-    "status": "active"
+    "status": "user"
   },
   {
     "id": "usr_003",
