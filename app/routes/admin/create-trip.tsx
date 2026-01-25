@@ -1,3 +1,4 @@
+import { ButtonComponent } from "@syncfusion/ej2-react-buttons";
 import { ComboBoxComponent } from "@syncfusion/ej2-react-dropdowns";
 import {
   LayerDirective,
@@ -5,8 +6,9 @@ import {
   MapsComponent,
 } from "@syncfusion/ej2-react-maps";
 import { Header } from "components";
-import { formatKey } from "lib/utils";
+import { cn, formatKey } from "lib/utils";
 import React, { useEffect } from "react";
+import { account } from "~/appwrite/client";
 import { comboBoxItems, selectItems } from "~/constants";
 import { world_map } from "~/constants/world_map";
 
@@ -18,6 +20,8 @@ import { world_map } from "~/constants/world_map";
 // };
 
 const createTrip = () => {
+  const [error, setError] = React.useState<string | null>(null);
+  const [loading, setLoading] = React.useState<boolean>(false);
   const [countries, setCountries] = React.useState<Array<any>>([]);
   const [formData, setFormData] = React.useState<TripFormData>({
     country: countries[0]?.name?.common || "",
@@ -55,7 +59,44 @@ const createTrip = () => {
     }
   };
 
-  const handleSubmit = async () => {};
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setLoading(true);
+
+    if (
+      !formData.country ||
+      !formData.travelStyle ||
+      !formData.interest ||
+      !formData.budget ||
+      !formData.groupType
+    ) {
+      setError("Please fill in all fields.");
+      setLoading(false);
+      return;
+    }
+
+    if (formData.duration < 1 || formData.duration > 10) {
+      setError("Duration must be between 1 and 10 days.");
+      setLoading(false);
+      return;
+    }
+
+    // const user = await account.get();
+    // if (!user.$id) {
+    //   console.error("User not logged in");
+    //   setLoading(false);
+    //   return;
+    // }
+
+    try {
+      // console.log("user", user);
+      console.log("formData", formData);
+    } catch (e) {
+      console.error("Error generating trip", e);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
     fetchCountries();
@@ -160,6 +201,30 @@ const createTrip = () => {
               </LayersDirective>
             </MapsComponent>
           </div>
+
+          <div className="bg-gray-200 h-px w-full"></div>
+
+          {error && (
+            <div className="error">
+              <p>{error}</p>
+            </div>
+          )}
+          <footer className="px-6 w-full">
+            <ButtonComponent
+              type="submit"
+              className="button-class !h-12 !w-full"
+              disabled={loading}
+            >
+              <img
+                src={`/assets/icons/${loading ? "loader.svg" : "magic-star.svg"}`}
+                className={cn("size-5", { "animate-spin": loading })}
+              />
+
+              <span className="p-16-semibold text-white">
+                {loading ? "Generating" : "Generate Trip"}
+              </span>
+            </ButtonComponent>
+          </footer>
         </form>
       </section>
     </main>
