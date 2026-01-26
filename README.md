@@ -1,87 +1,12 @@
-# Welcome to React Router!
+# Tourvisto
+An AI powered travel app that will automatically plan and create trips for you, without all the hassle of planning a trip by yourself! Enjoy your vacation to the fullest by leaving all the busy work to Tourvisto.
 
-A modern, production-ready template for building full-stack React applications using React Router.
+Made while following course by JS Mastery: https://www.youtube.com/watch?v=8vIDZO_w7lY
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## Screenshots
 
-## Features
-
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
-
-## Getting Started
-
-### Installation
-
-Install the dependencies:
-
-```bash
-npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
-npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+<img width="2560" height="1368" alt="Screenshot 2026-01-25 210015" src="https://github.com/user-attachments/assets/3c3a6832-0b37-4ed5-ba96-d3a2ca558f96" />
+<img width="2560" height="1368" alt="Screenshot 2026-01-25 210003" src="https://github.com/user-attachments/assets/ec9b20ad-cc61-450a-8089-beb090721d8e" />
+<img width="2560" height="1368" alt="Screenshot 2026-01-25 205947" src="https://github.com/user-attachments/assets/8b80c24d-af83-4834-b348-7170b233f9fb" />
+<img width="2560" height="1368" alt="Screenshot 2026-01-25 205908" src="https://github.com/user-attachments/assets/39ee22fe-0863-474d-bfb3-66535b927394" />
+<img width="2560" height="1368" alt="Screenshot 2026-01-25 205901" src="https://github.com/user-attachments/assets/6920ba9e-db85-4138-a796-42b64c51f0ef" />
